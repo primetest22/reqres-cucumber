@@ -21,3 +21,8 @@ Feature: Testing different request on reqres application
   Examples:
             |      email             |   password |
             |      eve.holt@reqres.in|  cityslicka|
+
+  Scenario: Check user can delete data using id
+    When User send DELETE request to user endpoint
+    Then User should see status code 204
+

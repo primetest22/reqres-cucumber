@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <title>Check user can create new user</title>
+    <title>Check user can delete data using id</title>
     <link rel="shortcut icon" href="favicon.ico">
 
 <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
@@ -40,7 +40,7 @@
         <span class="breadcrumbs">
             <a href="index.html" class="breadcrumbs">Home</a>
 
-            > Check user can create new user
+            > Check user can delete data using id
         </span>
         </div>
         <div class="rightbg"></div>
@@ -94,7 +94,7 @@
                             <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-3x' title='SUCCESS'></i></span>
                             <span class="test-case-title">
                                     <span class="success-color">
-                                    Check User Can Create New User
+                                    Check User Can Delete Data Using Id
                                         <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -107,44 +107,9 @@
 
     <div class="clr"></div>
 
-    <div class="story-title">
-        <h3 class="story-header">Scenario Outline</h3>
-
-        <div class="scenario">Create user with email firstname lastname and avatar</div>
-
-    </div>
 
     <div id="beforetable"></div>
 
-
-        <h3 class="story-header">Examples:</h3>
-            <div class="requirementNarrative"></div>
-        <div class="example-table">
-            <table>
-                <thead>
-                <tr>
-                    <th>#</th>
-                        <th>Email</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Avatar</th>
-                </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="test-SUCCESS"><a href="#0">1</a></td>
-                            <td class="test-SUCCESS"><a href="#0">mahendradhoni@gmail.com</a>
-                            </td>
-                            <td class="test-SUCCESS"><a href="#0">Mahendra</a>
-                            </td>
-                            <td class="test-SUCCESS"><a href="#0">Dhoni</a>
-                            </td>
-                            <td class="test-SUCCESS"><a href="#0">https://reqres.in/img/faces/1-image.jpg</a>
-                            </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
 
     <div id="tablecontents">
         <div>
@@ -175,13 +140,13 @@
                         <div class="step-description">
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                style="display:block;">
-                            <span class="top-level-step">When User send POST request with email "mahendradhoni@gmail.com" firstname "Mahendra" lastname "Dhoni" avatar "https://reqres.in/img/faces/1-image.jpg"</span>
+                            <span class="top-level-step">When User send DELETE request to user endpoint</span>
                             </a>
 
                         </div>
                     </td>
                     <td width="100"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">0.5s</span></td>
+                    <td width="100"><span class="top-level-step">0.19s</span></td>
                 </tr>
                     <tr>
                     <td colspan="5">
@@ -195,12 +160,12 @@
                     </td>
                     <td>
                         <div class="step-description">
-                            <span class="nested-step">Create user with email firstname lastname and avatar</span>
+                            <span class="nested-step">Delete user with id 2</span>
 
                         </div>
                     </td>
                     <td width="100"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">0.49s</span></td>
+                    <td width="100"><span class="nested-step">0.18s</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
@@ -210,7 +175,7 @@
                     </td>
                     <td>
                         <div class="step-description">
-                            <span class="nested-group-step">POST https://reqres.in/api/users</span>
+                            <span class="nested-group-step">DELETE https://reqres.in/api/users/2</span>
 
                                 <span class="rest-query">
                 <span>
@@ -229,23 +194,23 @@
                                         aria-label="Close"><span aria-hidden="true">&times;</span>
                                 </button>
                                 <h4 class="modal-title" id="restModalLabel">
-                                POST https://reqres.in/api/users
+                                DELETE https://reqres.in/api/users/2
                                 </h4>
                             </div>
                             <div class="modal-body">
-                                    <p>Status code: 201</p>
-                                    <p>Content Type: application/json</p>
+                                    <p>Status code: 204</p>
+                                    <p>Content Type: null</p>
                                     <h5>Request Headers</h5>
-                                    <pre>Accept=*/*<br>Content-Type=application/json; charset=UTF-8</pre>
+                                    <pre>Accept=*/*</pre>
                                     <h5>Content Body</h5>
-                                    <pre>{<br>    &quot;email&quot;: &quot;mahendradhoni@gmail.com&quot;,<br>    &quot;first_name&quot;: &quot;Mahendra&quot;,<br>    &quot;last_name&quot;: &quot;Dhoni&quot;,<br>    &quot;avatar&quot;: &quot;https://reqres.in/img/faces/1-image.jpg&quot;,<br>    &quot;password&quot;: null<br>}</pre>
+                                    <pre></pre>
                                     <h5>Request Cookies</h5>
                                     <pre></pre>
                                     <h5>Response Headers</h5>
-                                    <pre>Date: Wed, 22 Jun 2022 10:48:12 GMT<br>Content-Type: application/json; charset=utf-8<br>Content-Length: 196<br>Connection: keep-alive<br>X-Powered-By: Express<br>Access-Control-Allow-Origin: *<br>Etag: W/&quot;c4-1qN5WzrpL4zLFZ+zGkGM6NX2XYE&quot;<br>Via: 1.1 vegur<br>CF-Cache-Status: DYNAMIC<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=8P9lkh4lpGt0uaYFeVSRRVrMb2DrQ7E8COhtpO75vZQNONTCWR5CtM%2F0iH8ZM3cDIcxASj4MnuljUk5r5uTAZgdtkkang9mG8wjsb%2FbkVxC%2Feo2RhoxDMfVgDQ%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Server: cloudflare<br>CF-RAY: 71f4690768be0732-LHR</pre>
+                                    <pre>Date: Wed, 22 Jun 2022 10:48:13 GMT<br>Content-Length: 0<br>Connection: keep-alive<br>X-Powered-By: Express<br>Access-Control-Allow-Origin: *<br>Etag: W/&quot;2-vyGp6PvFo4RvsFtPoIWeCReyIC8&quot;<br>Via: 1.1 vegur<br>CF-Cache-Status: DYNAMIC<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=mjF1US1Pzs4Jm5ZOgwerH%2FfIOzwaDzbcMQ3vxH5x%2BDrwq9kmx9%2FoOaCUM0bVYOp4w9XjMwHCBLyadFIm0ZfqdhgCdq29%2BlRq1WqEZ342dC8tZhv%2BDLVzBVzx4g%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Server: cloudflare<br>CF-RAY: 71f4690aab6d887a-LHR</pre>
                                 <h5>Response Body</h5>
                                     <pre>
-                                        {<br>    &quot;email&quot;: &quot;mahendradhoni@gmail.com&quot;,<br>    &quot;first_name&quot;: &quot;Mahendra&quot;,<br>    &quot;last_name&quot;: &quot;Dhoni&quot;,<br>    &quot;avatar&quot;: &quot;https://reqres.in/img/faces/1-image.jpg&quot;,<br>    &quot;password&quot;: null,<br>    &quot;id&quot;: &quot;939&quot;,<br>    &quot;createdAt&quot;: &quot;2022-06-22T10:48:12.753Z&quot;<br>}
+                                        
                                     </pre>
                                     <h5>Response Cookies</h5>
                                     <pre></pre>
@@ -278,7 +243,7 @@
                     </td>
                     <td>
                         <div class="step-description">
-                            <span class="top-level-step">Then User must get a valid status code 201</span>
+                            <span class="top-level-step">Then User should see status code 204</span>
 
                         </div>
                     </td>
@@ -288,7 +253,7 @@
                 <tr class="test-SUCCESS">
                     <td colspan="2"></td>
                     <td width="100"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>0.5s</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>0.19s</em></span></td>
                 </tr>
 
             </table>

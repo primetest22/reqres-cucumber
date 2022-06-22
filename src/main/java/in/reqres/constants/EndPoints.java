@@ -7,5 +7,6 @@ public class EndPoints {
          public static final String CREATE_USERS = "/users";
          public static final String LOGIN = "/login";
          public static final String GET_SINGLE_USER = "/users/{ID}";
+         public static final String DELETE_USER = "/users/{ID}";
 
 }

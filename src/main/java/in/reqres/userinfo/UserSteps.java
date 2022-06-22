@@ -9,6 +9,7 @@ import net.serenitybdd.junit.runners.SerenityRunner;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
 
+
 import static net.serenitybdd.rest.SerenityRest.given;
 
 
@@ -54,6 +55,16 @@ public class UserSteps {
                 .body(userPojo)
                 .when()
                 .post(EndPoints.LOGIN)
+                .then().log().all();
+
+    }
+    @Step("Delete user with id 2")
+    public ValidatableResponse deleteUser(int id){
+
+        return SerenityRest.given().log().all()
+                .pathParam("ID",id)
+                .when()
+                .delete(EndPoints.DELETE_USER)
                 .then().log().all();
 
     }
