@@ -1,0 +1,48 @@
+package in.reqres.steps;
+
+import cucumber.api.PendingException;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import in.reqres.userinfo.UserSteps;
+import io.restassured.response.ValidatableResponse;
+import net.thucydides.core.annotations.Steps;
+
+
+public class MyStepdefs {
+
+    public static ValidatableResponse response;
+    @Steps
+    UserSteps userSteps;
+
+    @When("^User send GET request to user endpoint$")
+    public void userSendGETRequestToUserEndpoint() {
+        response = userSteps.getAllUserInfo();
+
+    }
+
+    @Then("^User must get a valid status code (\\d+)$")
+    public void userMustGetAValidStatusCode(int code) {
+           response.statusCode(code);
+    }
+
+    @When("^User send GET request to get single user with id (\\d+)$")
+    public void userSendGETRequestToGetSingleUserWithId(int id) {
+        response = userSteps.gerSingleUser(id);
+    }
+
+    @When("^User send POST request with email \"([^\"]*)\" firstname \"([^\"]*)\" lastname \"([^\"]*)\" avatar \"([^\"]*)\"$")
+    public void userSendPOSTRequestWithEmailFirstnameLastnameAvatar(String email, String firsname, String lastname, String avatar)  {
+        response = userSteps.createUser(email,firsname,lastname,avatar);
+
+    }
+
+    @Then("^User should validate status code (\\d+)$")
+    public void userShouldValidateStatusCode(int code1) {
+        response.statusCode(code1);
+    }
+
+    @When("^User send POST request with email\"([^\"]*)\" password \"([^\"]*)\"$")
+    public void userSendPOSTRequestWithEmailPassword(String email, String password)  {
+       response = userSteps.login(email,password);
+    }
+}
